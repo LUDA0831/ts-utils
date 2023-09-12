@@ -1,10 +1,18 @@
 {
   "name": "@vue-sp/utils",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "vue utils",
-  "author": "",
+  "author": "LUDA0831",
   "license": "ISC",
+  "homepage": "https://github.com/LUDA0831/vue-sp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LUDA0831/vue-sp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LUDA0831/vue-sp/issues"
+  },
   "keywords": [
     "vue-sp",
     "vue3",
@@ -27,7 +35,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "prepare": "npm version patch && npm run build"
   },
   "dependencies": {
     "dayjs": "^1.11.9",
