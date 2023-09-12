@@ -1,0 +1,44 @@
+{
+  "name": "@vue-sp/utils",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "vue utils",
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "vue-sp",
+    "vue3",
+    "vue"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.9",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.9",
+    "@types/node": "^20.6.0",
+    "@vue/shared": "^3.3.4",
+    "@vueuse/core": "^10.4.1",
+    "tsup": "^7.2.0"
+  }
+}
