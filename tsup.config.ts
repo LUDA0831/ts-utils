@@ -6,5 +6,5 @@ export default defineConfig({
   dts: {
     resolve: true,
   },
-  external: ['vue', 'lodash-es'],
+  external: ['vue', 'lodash-es', 'dayjs'],
 })

@@ -44,3 +44,42 @@ export function setObjToUrlParams(baseUrl: string, obj: any): string {
     ? baseUrl + parameters
     : baseUrl.replace(/\/?$/, '?') + parameters
 }
+
+// 是否浏览器环境
+export const inBrowser = typeof window !== 'undefined'
+
+/**
+ * 通过 requestAnimationFrame API 调度函数在浏览器下一帧执行
+ * 如果不在浏览器环境中或不支持此API，返回 -1
+ * @param fn - 要在动画帧中执行的回调函数
+ * @returns 动画帧请求的标识符或 -1
+ */
+export function raf(fn: FrameRequestCallback): number {
+  return inBrowser ? requestAnimationFrame(fn) : -1
+}
+
+/**
+ * 取消指定的动画帧请求
+ *
+ * @param id - 要取消的动画帧请求的标识符
+ *
+ * 如果在浏览器环境中，调用 cancelAnimationFrame 函数来取消请求，否则不会执行任何操作。
+ */
+export function cancelRaf(id: number) {
+  if (inBrowser) {
+    cancelAnimationFrame(id)
+  }
+}
+
+/**
+ * 调度函数以在浏览器的下两帧执行
+ * 此函数使用 requestAnimationFrame API 来调度一个回调函数。它首先调度一个内部函数，该内部函数又调度提供的回调函数
+ * 这样，回调函数将在两帧后执行，实现了一种延迟执行的效果
+ *
+ * @param fn - 要在两帧后执行的回调函数
+ *
+ * 如果在浏览器环境中，该函数能够正常调度，否则不会执行任何操作。
+ */
+export function doubleRaf(fn: FrameRequestCallback): void {
+  raf(() => raf(fn))
+}
