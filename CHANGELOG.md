@@ -1,5 +1,12 @@
 
 
+## [1.1.1](https://github.com/LUDA0831/ts-utils/compare/1.1.0...1.1.1) (2024-07-30)
+
+
+### ✨ Features | 新功能
+
+* 添加useCountDown方法 ([35ed416](https://github.com/LUDA0831/ts-utils/commit/35ed416a9b169cb5d511c9fb4d482a2d7d4d4bed))
+
 ## 1.1.0 (2024-07-13)
 
 
