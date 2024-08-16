@@ -1,5 +1,12 @@
 
 
+## [1.1.2](https://github.com/LUDA0831/ts-utils/compare/1.1.1...1.1.2) (2024-08-16)
+
+
+### ✨ Features | 新功能
+
+* 添加isWechat方法 ([1f371bb](https://github.com/LUDA0831/ts-utils/commit/1f371bbd382635f4e3abac9d36e4b37c93258444))
+
 ## [1.1.1](https://github.com/LUDA0831/ts-utils/compare/1.1.0...1.1.1) (2024-07-30)
 
 
