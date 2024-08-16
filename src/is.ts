@@ -49,3 +49,9 @@ export const isObject = (val: any): val is Record<any, any> => val !== null && i
 export const isMobile = !!navigator.userAgent.match(
   /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i,
 )
+
+/**
+ *  导出一个常量 isWechat，用于标识当前浏览器环境是否为微信
+ *  @returns 如果是微信，则返回 true，否则返回 false
+ */
+export const isWechat = navigator.userAgent.toLowerCase().includes('micromessenger')
