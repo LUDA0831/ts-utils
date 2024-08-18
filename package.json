@@ -34,10 +34,10 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "npx simple-git-hooks",
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint .",
-    "postinstall": "npx simple-git-hooks",
     "release": "release-it patch --ci",
     "release:minor": "release-it minor --ci",
     "release:major": "release-it major --ci"
