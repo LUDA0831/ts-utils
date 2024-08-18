@@ -1,5 +1,14 @@
 
 
+## [1.1.3](https://github.com/LUDA0831/ts-utils/compare/1.1.2...1.1.3) (2024-08-18)
+
+
+### 👷‍ Build System | 构建
+
+* 修改配置 ([556fb03](https://github.com/LUDA0831/ts-utils/commit/556fb03c4634471638e62a9115ce2be523579e87))
+* 升级依赖 ([43e5919](https://github.com/LUDA0831/ts-utils/commit/43e59195148e731e20039153245cf23c5c530f4b))
+* 升级依赖 ([530615e](https://github.com/LUDA0831/ts-utils/commit/530615e6a995572fafa2ec65f236b58a0bd88663))
+
 ## [1.1.2](https://github.com/LUDA0831/ts-utils/compare/1.1.1...1.1.2) (2024-08-16)
 
 
