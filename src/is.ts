@@ -1,4 +1,5 @@
 import { isNull, isUndefined } from 'lodash-es'
+import { inBrowser } from './util'
 
 export { isArray, isBoolean, isEmpty, isEqual, isFunction, isMap, isNull, isNumber, isString, isUndefined, noop, upperFirst } from 'lodash-es'
 
@@ -13,10 +14,10 @@ export function is(val: unknown, type: string): boolean {
 }
 
 /**
- * 判断一个值是否未定义
+ * 判断一个值是否定义
  *
  * @param val (可选) 要检查的值，可以是任意类型的 T
- * @returns 如果值未定义，则返回 true，否则返回 false
+ * @returns 如果值定义，则返回 true，否则返回 false
  */
 export const isDefined = <T = unknown>(val?: T): val is T => !isUndefined(val)
 
@@ -44,12 +45,14 @@ export const isObject = (val: any): val is Record<any, any> => val !== null && i
  *
  * @returns 如果是手机，则返回 true，否则返回 false
  */
-export const isMobile = !!navigator.userAgent.match(
-  /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i,
-)
+export const isMobile = inBrowser
+  ? !!navigator.userAgent.match(
+      /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i,
+    )
+  : false
 
 /**
  *  导出一个常量 isWechat，用于标识当前浏览器环境是否为微信
  *  @returns 如果是微信，则返回 true，否则返回 false
  */
-export const isWechat = navigator.userAgent.toLowerCase().includes('micromessenger')
+export const isWechat = inBrowser ? navigator.userAgent.toLowerCase().includes('micromessenger') : false
