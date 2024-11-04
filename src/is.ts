@@ -1,8 +1,6 @@
 import { isNull, isUndefined } from 'lodash-es'
 
-export { NOOP, isFunction, isString, isArray, isMap } from '@vue/shared'
-
-export { isNull, isEmpty, isNumber, isBoolean, isEqual, isUndefined, upperFirst } from 'lodash-es'
+export { isArray, isBoolean, isEmpty, isEqual, isFunction, isMap, isNull, isNumber, isString, isUndefined, noop, upperFirst } from 'lodash-es'
 
 /**
  * 检查一个值是否属于特定类型

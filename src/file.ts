@@ -1,5 +1,5 @@
-import { openWindow } from './util'
 import type { Nullable } from './types'
+import { openWindow } from './util'
 
 /**
  * 定义一个名为 DownloadByUrlOption 的接口，该接口包含三个属性，用于配置 URL 下载操作
