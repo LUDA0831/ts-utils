@@ -1,5 +1,15 @@
 
 
+## [1.2.0](https://github.com/LUDA0831/ts-utils/compare/1.1.3...1.2.0) (2024-11-04)
+
+### ✨ Features | 新功能
+
+* 添加测试 ([b5856aa](https://github.com/LUDA0831/ts-utils/commit/b5856aa3b33a8d69fef1847a5437d76e6777221e))
+
+### 👷‍ Build System | 构建
+
+* 整理依赖 ([07208d5](https://github.com/LUDA0831/ts-utils/commit/07208d53a47603841b76e1a793cefb0c40a053af))
+
 ## [1.1.3](https://github.com/LUDA0831/ts-utils/compare/1.1.2...1.1.3) (2024-08-18)
 
 
